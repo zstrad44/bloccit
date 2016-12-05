@@ -4,3 +4,22 @@
 h1 {
   color: red;
 }
+.social-btn {
+  width: 200px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #4285F4;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  line-height: 4;
+}
+
+
+.social-btn:hover {
+  text-decoration: none;
+  background-color: #696969;
+  color: #fff;
+
+}
