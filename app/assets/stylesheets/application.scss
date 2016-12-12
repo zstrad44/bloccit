@@ -16,10 +16,37 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.user-info {
-  margin-top: 9px;
-}
-
 .nav {
   margin-top: 5px;
+}
+.user-info {
+  vertical-align: middle;
+  padding: 3px 0 3px 3px;
+}
+.user-info .gravatarImage {
+  border-radius: 5px;
+  margin-left: 7px;
+}
+.user-info .headUser {
+  color: #4285F4;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+.user-info .userSignout a {
+  font-size: 1.1em;
+  color: #fff !important;
+  background-color: #888888;
+  padding: 5px;
+  border-radius: 10px;
+  transition: .2s ease;
+
+}
+.user-info .userSignout a:hover {
+  text-decoration: none;
+  background-color: #ff4444;
+  transition: .2s ease;
+}
+.user-info .userSignout a, .headUser {
+  vertical-align: middle;
 }
