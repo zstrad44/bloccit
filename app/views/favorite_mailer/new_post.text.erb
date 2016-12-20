@@ -1,0 +1,16 @@
+Thank for posting on Bloccit!
+
+Post Details:
+Post title - <%= @post.title %>
+Posted By - <%= @post.user.name %>
+
+Dont know why we put this here but here ya go: <%= "=" * (@post.title.length + 12) %>
+
+ Post content:
+
+<%= @post.body %>
+
+
+ We have automatically favorited your post on your behalf. If anyone makes a new comment to your post, we will notify you via email. Your welcome!
+
+Visit online at: <%= topic_post_url(@post.topic, @post) %>
