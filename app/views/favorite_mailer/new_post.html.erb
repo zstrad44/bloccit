@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  </head>
+  <body style="background-color:#fafafa; margin: 0 auto;">
+    <div style="background-color:#e0e0e0 ; padding: 7px; width:80%; margin-top: 10px; margin-bottom: 20px; margin: 0 auto;">
+        <h1 style="color:#4285F4;">Thank for posting on Bloccit!
+            <span style="font-weight:bold;"></span>
+        </h1>
+        <h3>Post Details:</h3>
+        <ul>
+            <li>
+                <h3>
+                    <span style="font-weight:bold;">Post title:"<%= @post.title.titleize %>"</span>
+                </h3>
+            </li>
+            <li>
+                <h3>
+                    <span style="font-weight:bold;">Posted by: "<%= @post.user.name.titleize %>"</span>
+                </h3>
+            </li>
+        </ul>
+        <h3></h3>
+    </div>
+    <br/>
+    <div style="background-color:#e0e0e0 ; padding: 10px; width:80%; margin-top: 10px; margin-bottom: 10px; margin: 0 auto;">
+        <h3 style="color:#4285F4; font-weight:bold;">Post Contents:</h3>
+        <p style="background-color:#fff ; padding: 35px;">
+            <%= @post.body %>
+        </p>
+    </div>
+    <br>
+    <div style="background-color:#e0e0e0 ; padding: 10px; width:80%; margin-top: 10px; margin-bottom: 30px; margin: 0 auto;">
+        <h3 style="color:#757575;">We have automatically favorited your post on your behalf. If anyone makes a new comment to your post, we will notify you via email. Your welcome!</h3>
+        <p>
+            <br>
+            <%= link_to "View your post on our site", topic_post_url(@post.topic, @post) %>
+        </p>
+    </div>
+    <br/>
+
+  </body>
+</html>
