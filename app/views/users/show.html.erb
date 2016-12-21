@@ -19,8 +19,23 @@
   </div>
 </div>
 
-<h2>Posts</h2>
-<%= render @user.posts %>
 
-<h2>Comments</h2>
-<%= render @user.comments %>
+<% if user_posts_any?(@user) %>
+  <h2>Posts</h2>
+  <%= render @user.posts %>
+<% else %>
+  <%= @user.name %> has not submitted any posts.
+<% end %>
+<br>
+<% if user_comment_any?(@user) %>
+  <h2>Comments</h2>
+  <%= render @user.comments %>
+<% else %>
+  <%= @user.name %> has not submitted any comments yet.
+<% end %>
+<br>
+<h2>Posts <%= @user.name %> has favorited:</h2>
+
+  <% @favorited_posts.each do |post| %>
+    <p><%= link_to post.title, topic_post_path(post.topic.id, post.id) %></p>
+  <% end %>
